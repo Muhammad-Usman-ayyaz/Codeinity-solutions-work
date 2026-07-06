@@ -4,8 +4,10 @@
     box-sizing: border-box;
 }
 
-html, body {
-    overflow-x: hidden; /* Prevents horizontal scroll */
+html,
+body {
+    overflow-x: hidden;
+    /* Prevents horizontal scroll */
     width: 100%;
     margin: 0;
 }
@@ -15,33 +17,38 @@ body {
 }
 
 .resume-box {
-    display: flex;         
+    display: flex;
     max-width: 1000px;
-    margin: 20px auto;     
+    margin: 20px auto;
     background-color: #ffffff;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
+
 .left-sidebar {
-    width: 300px; 
-    background-color: #1a2332; 
+    width: 300px;
+    background-color: #1a2332;
     color: white;
     padding: 40px 30px;
 }
+
 .left-sidebar p,
 .left-sidebar h2,
 .left-sidebar ul {
     margin: 0;
     padding: 0;
 }
+
 .left-sidebar section {
     margin-bottom: 25px;
 }
-.left-sidebar h2{
+
+.left-sidebar h2 {
     margin-bottom: 15px;
-    padding-bottom:8px;
-    letter-spacing:1px;
-    font-size:20px;
+    padding-bottom: 8px;
+    letter-spacing: 1px;
+    font-size: 20px;
 }
+
 h2 {
     font-size: 18px;
     text-transform: uppercase;
@@ -51,7 +58,7 @@ h2 {
 }
 
 .left-sidebar ul {
-    list-style: none; 
+    list-style: none;
     margin-top: 10px;
 }
 
@@ -62,7 +69,8 @@ h2 {
 section {
     margin-bottom: 30px;
 }
-.left-sidebar h1{
+
+.left-sidebar h1 {
     border-bottom: #1a2332;
 
 }
@@ -73,7 +81,7 @@ section {
 }
 
 .profile-header h1 {
-    color:white;
+    color: white;
     font-size: px;
     margin-top: 15px;
     margin-bottom: 5px;
@@ -81,22 +89,27 @@ section {
 
 .profile-header p {
     font-size: 14px;
-    color:rgb(93, 102, 210); 
+    color: rgb(93, 102, 210);
 }
-.contact, .education{
-    line-height:25px;
+
+.contact,
+.education {
+    line-height: 25px;
 }
-.left-sidebar .education p{
+
+.left-sidebar .education p {
     margin-bottom: 5px;
     line-height: 1.4;
 }
+
 .skills {
-     color: white; 
-     padding: 10px; 
-     border-top:2px solid #ffffff;
-    }
-.skill-item { 
-    margin-bottom: 15px; 
+    color: white;
+    padding: 10px;
+    border-top: 2px solid #ffffff;
+}
+
+.skill-item {
+    margin-bottom: 15px;
 }
 
 .skill-info {
@@ -106,27 +119,29 @@ section {
     font-size: 12px;
     margin-bottom: 5px;
 }
-.languages{
-    color: white; 
-    padding: 10px; 
-    border-top:2px solid #ffffff;
+
+.languages {
+    color: white;
+    padding: 10px;
+    border-top: 2px solid #ffffff;
 }
 
 .progress-bg {
-    background-color: #444; 
+    background-color: #444;
     height: 6px;
     border-radius: 50%;
     width: 100%;
 }
 
 .progress-fill {
-    background-color:rgb(93, 102, 210); 
+    background-color: rgb(93, 102, 210);
     height: 100%;
     border-radius: 3px;
-    
+
 }
+
 .right-content {
-    flex: 1; 
+    flex: 1;
     padding: 40px;
     background-color: #ffffff;
 }
@@ -134,7 +149,7 @@ section {
 h1 {
     font-size: 20px;
     color: #1a2332;
-   
+
     padding-bottom: 5px;
     margin-bottom: 15px;
     text-transform: uppercase;
@@ -146,20 +161,24 @@ h3 {
     margin-bottom: 5px;
 }
 
-.right-content h1, h2{
-    margin-bottom:18px;
+.right-content h1,
+h2 {
+    margin-bottom: 18px;
 }
 
 section {
     margin-bottom: 30px;
 }
-.work-experience{
-    padding:-5px;
+
+.work-experience {
+    padding: -5px;
 }
-.job, .project {
+
+.job,
+.project {
     margin-bottom: 25px;
-    margin-left:20%;
-   
+    margin-left: 20%;
+
 }
 
 ul {
@@ -172,108 +191,120 @@ li {
     font-size: 14px;
 }
 
-.achievements p, .references p {
+.achievements p,
+.references p {
     margin-bottom: 8px;
     font-size: 14px;
 }
-p{
+
+p {
     color: rgb(93, 102, 210);
 }
 
-.featured-projects{
+.featured-projects {
     border-top: 2px solid grey;
     margin-top: 30px;
     padding-top: 25px;
 
 }
+
 .work-experience {
-    margin-bottom:15px;
+    margin-bottom: 15px;
 }
 
-.projects-container{
+.projects-container {
     display: flex;
-    gap:20 px;
+    gap: 20px;
 }
 
 
-.project{
-    margin:8px;
-    padding:0;
-    border:2px solid rgb(200, 191, 191);
-    width:33%;
-    border-radius:6px;
-    overflow:hidden;
-}
-.project img{
-    width:100%;
-    height:140px;
-    object-fit:cover;
-    display:block;
-    margin:0;
-}
-.project h3{
-    padding:10px 12px 0 12px;
-}
-.project p{
-    padding:0 12px;
-}
-.project .projP{
-    padding:0 12px 12px 12px;
-}
-.project .projP p{
-    padding:0;
-}
-.project br{
-    display:none;
-}
-
-.achievements-container{
-    display: flex;
-    gap:20 px;
-}
-
-.achievement{
+.project {
     margin: 8px;
-    padding:5px;
-    border:2px solid rgb(200, 191, 191);
-    width:33%;
-    border-radius:6px;
+    padding: 0;
+    border: 2px solid rgb(200, 191, 191);
+    width: 33%;
+    border-radius: 6px;
+    overflow: hidden;
 }
 
-.references-container{
+.project img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+}
+
+.project h3 {
+    padding: 10px 12px 0 12px;
+}
+
+.project p {
+    padding: 0 12px;
+}
+
+.project .projP {
+    padding: 0 12px 12px 12px;
+}
+
+.project .projP p {
+    padding: 0;
+}
+
+.project br {
+    display: none;
+}
+
+.achievements-container {
     display: flex;
-    gap:40 px;
-    
+    gap: 20px;
 }
 
-.reference{
+.achievement {
+    margin: 8px;
+    padding: 5px;
+    border: 2px solid rgb(200, 191, 191);
+    width: 33%;
+    border-radius: 6px;
+}
+
+.references-container {
+    display: flex;
+    gap: 40px;
+
+}
+
+.reference {
     display: flex;
     flex-direction: row;
     align-items: left;
     text-align: left;
     max-width: 250px;
-    margin:10px;
-    padding:10px;
-    gap:10px;
+    margin: 10px;
+    padding: 10px;
+    gap: 10px;
     line-height: 22px;
-    
+
 }
 
-.reference img{
-    width:100px;
-    height:100px;
+.reference img {
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom:15px;
-    border:1px solid#ddd;
+    margin-bottom: 15px;
+    border: 1px solid#ddd;
 }
+
 .lang-container {
     display: flex;
     gap: 20px;
     justify-content: center;
 }
 
-.lang-item { text-align: center; }
+.lang-item {
+    text-align: center;
+}
 
 .circle {
     width: 75px;
@@ -289,9 +320,9 @@ p{
 .circle::before {
     content: "";
     position: absolute;
-    width: 85%; 
+    width: 85%;
     height: 85%;
-    background: #1e293b; 
+    background: #1e293b;
     border-radius: 50%;
 }
 
@@ -312,38 +343,41 @@ p{
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    border:2px solid black;
+    border: 2px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     background: conic-gradient(var(--color) var(--percent), #ffffff 0);
-    transform: translate(10px,68px);
+    transform: translate(10px, 68px);
 }
+
 .tim-circle2 {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    border:2px solid black;
+    border: 2px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     background: conic-gradient(var(--color) var(--percent), #ffffff 0);
-    transform: translate(10px,254px);
+    transform: translate(10px, 254px);
 }
+
 .tim-circle3 {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    border:2px solid black;
+    border: 2px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     background: conic-gradient(var(--color) var(--percent), #ffffff 0);
-    transform: translate(10px,405px);
+    transform: translate(10px, 405px);
 }
+
 .job-date {
     position: absolute;
     left: -140px;
@@ -355,7 +389,7 @@ p{
     width: 110px;
 }
 
-.job{
+.job {
     margin-left: 25%;
     border-left: 2px solid rgb(164, 157, 157);
     padding: 10px;
@@ -365,71 +399,85 @@ p{
 }
 
 .work-experience hr {
-    transform: translate(-335px ,210px) rotate(90deg) scale(.5,.5);
+    transform: translate(-335px, 210px) rotate(90deg) scale(.5, .5);
     width: 650px;
     color: black;
     height: 0px;
     margin: 30px;
-    position: absolute;  
-    
+    position: absolute;
+
 }
 
-.left-sidebar p{
-    color:white;
+.left-sidebar p {
+    color: white;
 }
+
 .right-content p {
     color: #1a2332;
 }
-.job strong{
-    color:rgb(93, 102, 210);
+
+.job strong {
+    color: rgb(93, 102, 210);
 }
 
-u{
+u {
     text-decoration-color: grey;
     text-underline-offset: 10px;
 }
 
-.profile-header p{
-    color:rgb(93, 102, 210);
-}
-.edu1{
-    border-bottom:2px solid #334e68;
-    margin-bottom: 10px;
-}
-.left-sidebar{
-    border-bottom:2px solid #334e68 ;
-}
-.work-experience h1{
-    padding: 10px;
-}
-.work-experience h1 {
-    margin-bottom: -24px; 
-}
-.skills, .languages {
-    border-top: 1px solid #334e68; 
+.profile-header p {
+    color: rgb(93, 102, 210);
 }
 
 .edu1 {
-    border-bottom: 1px solid #334e68; }
+    border-bottom: 2px solid #334e68;
+    margin-bottom: 10px;
+}
 
-body{
-    font-family: 'Poppins',sans-serif;
+.left-sidebar {
+    border-bottom: 2px solid #334e68;
+}
+
+.work-experience h1 {
+    padding: 10px;
+}
+
+.work-experience h1 {
+    margin-bottom: -24px;
+}
+
+.skills,
+.languages {
+    border-top: 1px solid #334e68;
+}
+
+.edu1 {
+    border-bottom: 1px solid #334e68;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
     line-height: 1.1;
-    color:#333;
+    color: #333;
     background-color: #f4f4f4;
 }
-.projP p{
-    color:rgb(93, 102, 210);
+
+.projP p {
+    color: rgb(93, 102, 210);
 }
-.job-date{
+
+.job-date {
     text-align: center;
 }
+
 .AAChivements h1 {
     margin-bottom: 25px;
 }
+
 .Achivements:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
+
 .AAchivements {
     display: flex;
     gap: 10px;
@@ -444,18 +492,19 @@ body{
     border: 1px solid #e0e0e0;
     border-radius: 8px;
     background-color: #ffffff;
-    
+
 }
+
 .ach-content {
     display: flex-start;
-    align-items: center; 
-    gap: 10px;           
+    align-items: center;
+    gap: 10px;
 }
 
 .trophy {
     position: static;
     font-size: 24px;
-    flex-shrink: 0;     
+    flex-shrink: 0;
 }
 
 .Achivements {
@@ -476,142 +525,178 @@ body{
     margin: 0;
     font-size: 13px;
 }
-.right-content h1{
+
+.right-content h1 {
     color: #1a2332;
 }
-.left-sidebar h3{
-   
-    font-size:15px;
-    color:white;
+
+.left-sidebar h3 {
+
+    font-size: 15px;
+    color: white;
 }
 
 .ach-content {
-    display: flex;         
-    align-items: flex-start; 
-    gap: 15px;          
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
 }
 
 
 .trophy {
     font-size: 24px;
-    flex-shrink: 0; 
+    flex-shrink: 0;
 }
 
 .ach-text {
     flex: 1;
 }
+
 .AAChivements h1 {
     margin-bottom: 25px;
 }
+
 .ach-text h3 {
-    margin: 0 0 10px 0;   
+    margin: 0 0 10px 0;
     font-size: 16px;
 }
-.profile-header p{
-   
-    font-size:20px;
-   
+
+.profile-header p {
+
+    font-size: 20px;
+
 }
-.project .projP{
-    padding:0 12px 12px 12px;
-    margin-top:10px;
+
+.project .projP {
+    padding: 0 12px 12px 12px;
+    margin-top: 10px;
 }
+
 ul {
     margin-top: 10px;
     padding-left: 20px;
     list-style: none;
 }
-.projects-container{
+
+.projects-container {
     display: flex;
-    gap:16px;
+    gap: 16px;
 }
-.project{
-    flex:1;
-    margin:8px 0;
-    padding:0;
-    border:2px solid rgb(200, 191, 191);
-    border-radius:6px;
-    overflow:hidden;
-    text-align:start;
+
+.project {
+    flex: 1;
+    margin: 8px 0;
+    padding: 0;
+    border: 2px solid rgb(200, 191, 191);
+    border-radius: 6px;
+    overflow: hidden;
+    text-align: start;
 }
-.project h3{
-    padding:10px 12px 0 12px;
-    min-height:2.6em;
-    line-height:1.3;
+
+.project h3 {
+    padding: 10px 12px 0 12px;
+    min-height: 2.6em;
+    line-height: 1.3;
 }
-.project{
-    flex:1;
-    margin:8px 0;
-    padding:0px;
-    border:1px solid #e0e0e0;
-    border-radius:8px;
-    background-color:#ffffff;
+
+.project {
+    flex: 1;
+    margin: 8px 0;
+    padding: 0px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #ffffff;
 }
-.project img{
-    width:100%;
-    height:125px;
-    object-fit:cover;
-    display:block;
-    margin-bottom:8px;
+
+.project img {
+    width: 100%;
+    height: 125px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 8px;
 }
-.project h3{ padding: 5px;; margin-bottom:4px; font-size:14px; line-height:1.3; }
-.project p{ padding: 5px;; font-size:14px; color:#555; }
-.project .projP{ padding: 5px;; margin-top:6px; }
-.project .projP p{ padding:5; color:rgb(93, 102, 210); font-size:14px; }
+
+.project h3 {
+    padding: 5px;
+    ;
+    margin-bottom: 4px;
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+.project p {
+    padding: 5px;
+    ;
+    font-size: 14px;
+    color: #555;
+}
+
+.project .projP {
+    padding: 5px;
+    ;
+    margin-top: 6px;
+}
+
+.project .projP p {
+    padding: 5;
+    color: rgb(93, 102, 210);
+    font-size: 14px;
+}
 
 
 .icon-box {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 26px;
-  height: 26px;
-  min-width: 26px;
-  flex-shrink: 0;
-  border-radius: 4px;
-  background-color: rgb(93, 102, 210);
-  font-size: 14px;
-  color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    min-width: 26px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    background-color: rgb(93, 102, 210);
+    font-size: 14px;
+    color: #ffffff;
 }
 
 
 .contact-icon {
-  width: 14px;
-  text-align: center;
-  color: rgb(93, 102, 210);
+    width: 14px;
+    text-align: center;
+    color: rgb(93, 102, 210);
 }
 
 .trophy i {
-  color: rgb(93, 102, 210);
+    color: rgb(93, 102, 210);
 }
 
 .icon-heading {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  position: relative;
-  padding-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    padding-bottom: 6px;
 }
 
 .icon-heading::after {
-  content: "";
-  position: absolute;
-  left: 37px;      
-  bottom: 0;
-  height: 1px;
+    content: "";
+    position: absolute;
+    left: 37px;
+    bottom: 0;
+    height: 1px;
 }
 
 .left-sidebar .icon-heading::after {
-  width: 130px;
-  background-color: rgba(255, 255, 255, 0.2);
+    width: 130px;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 
 .right-content .icon-heading::after {
-  width: 300px;
-  height: 2px;
-  background-color: #94a3b8;
+    width: 300px;
+    height: 2px;
+    background-color: #94a3b8;
 }
+
 .languages .icon-heading::after {
     display: none;
-  }
+}
