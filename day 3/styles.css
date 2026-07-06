@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+html, body {
+    overflow-x: hidden; /* Prevents horizontal scroll */
+    width: 100%;
+    margin: 0;
+}
+
 body {
     font-family: Arial, sans-serif;
 }
@@ -20,7 +26,6 @@ body {
     background-color: #1a2332; 
     color: white;
     padding: 40px 30px;
-    min-height: 100vh; 
 }
 .left-sidebar p,
 .left-sidebar h2,
@@ -38,7 +43,7 @@ body {
     font-size:20px;
 }
 h2 {
-    font-size: 16px;
+    font-size: 18px;
     text-transform: uppercase;
     margin-bottom: 10px;
     padding-bottom: 5px;
@@ -381,7 +386,7 @@ p{
 
 u{
     text-decoration-color: grey;
-    text-underline-offset: 9px;
+    text-underline-offset: 10px;
 }
 
 .profile-header p{
@@ -591,7 +596,7 @@ ul {
 .icon-heading::after {
   content: "";
   position: absolute;
-  left: 36px;      
+  left: 37px;      
   bottom: 0;
   height: 1px;
 }
@@ -603,7 +608,10 @@ ul {
 
 
 .right-content .icon-heading::after {
-  width: 200px;
+  width: 300px;
   height: 2px;
   background-color: #94a3b8;
 }
+.languages .icon-heading::after {
+    display: none;
+  }
