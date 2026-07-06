@@ -190,7 +190,7 @@ p{
     gap:20 px;
 }
 
-/* ===== Project cards: image now flush with card edges ===== */
+
 .project{
     margin:8px;
     padding:0;
@@ -479,19 +479,19 @@ body{
     font-size:15px;
     color:white;
 }
-/* Update this to ensure the flexbox works as intended */
+
 .ach-content {
-    display: flex;         /* Enables flexbox */
-    align-items: flex-start; /* Aligns items to the top */
-    gap: 15px;             /* Adds space between icon and text */
+    display: flex;         
+    align-items: flex-start; 
+    gap: 15px;          
 }
 
-/* Ensure the trophy icon doesn't shrink */
+
 .trophy {
     font-size: 24px;
     flex-shrink: 0; 
 }
-/* Optional: Ensure the text block fills the remaining space */
+
 .ach-text {
     flex: 1;
 }
@@ -554,10 +554,7 @@ ul {
 .project .projP{ padding: 5px;; margin-top:6px; }
 .project .projP p{ padding:5; color:rgb(93, 102, 210); font-size:14px; }
 
-/* ================================
-   ICON HEADINGS (added: icon box + short floating underline,
-   replaces flat border-bottom / <u> underline look)
-================================ */
+
 .icon-box {
   display: inline-flex;
   align-items: center;
@@ -572,14 +569,13 @@ ul {
   color: #ffffff;
 }
 
-/* small inline icons used in the contact list */
+
 .contact-icon {
   width: 14px;
   text-align: center;
   color: rgb(93, 102, 210);
 }
 
-/* trophy-slot icons on achievement cards */
 .trophy i {
   color: rgb(93, 102, 210);
 }
@@ -595,18 +591,17 @@ ul {
 .icon-heading::after {
   content: "";
   position: absolute;
-  left: 36px;      /* 26px icon width + 10px gap */
+  left: 36px;      
   bottom: 0;
   height: 1px;
 }
 
-/* sidebar headings: light line on dark background */
 .left-sidebar .icon-heading::after {
   width: 130px;
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* main content headings: grey line on white background */
+
 .right-content .icon-heading::after {
   width: 200px;
   height: 2px;
