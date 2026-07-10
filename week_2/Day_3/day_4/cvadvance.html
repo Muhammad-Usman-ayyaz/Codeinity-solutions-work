@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="cvscript.js"></script>
+</head>
+
+<body>
+
+    <button id="download-pdf"
+        style="position: fixed; bottom: 30px; right: 30px; z-index: 1000; padding: 12px 24px; background-color: rgb(93, 102, 210); color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 16px; font-weight: bold; box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: transform 0.2s; display: flex; align-items: center; gap: 8px;"
+        onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        <i class="fa-solid fa-file-pdf"></i> Save as PDF
+    </button>
+
+    <div class="resume-box">
+        <aside class="left-sidebar">
+            <div class="profile-header">
+                <img src="p.png" alt="Muhammad Usman" width="220" height="250">
+                <h1>Muhammad Usman</h1>
+                <p>Full Stack Developer</p>
+            </div>
+
+            <section class="contact">
+                <h2 class="icon-heading"><span class="icon-box"><i
+                            class="fa-solid fa-address-card"></i></span><span>Contact</span></h2>
+                <p><i class="fa-solid fa-phone contact-icon"></i> +92 300 1234567</p>
+                <p><i class="fa-solid fa-envelope contact-icon"></i> usmanayyazali@gmail.com</p>
+                <p><i class="fa-solid fa-location-dot contact-icon"></i> Lahore, Pakistan</p>
+
+            </section>
+
+            <section class="skills">
+                <h2 class="icon-heading"><span class="icon-box"><i
+                            class="fa-solid fa-gear"></i></span><span>SKILLS</span></h2>
+                <h3>FRONTEND & BACKEND</h3>
+
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span>MERN Stack</span>
+                        <span>95%</span>
+                    </div>
+                    <div class="progress-bg">
+                        <div class="progress-fill" style="width: 95%;">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span>C++ / OOP</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="progress-bg">
+                        <div class="progress-fill" style="width: 90%;"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span>Python / AI Integration</span>
+                        <span>85%</span>
+                    </div>
+                    <div class="progress-bg">
+                        <div class="progress-fill" style="width: 85%;">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span>RDBMS</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="progress-bg">
+                        <div class="progress-fill" style="width: 90%;">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info"><span>Data Structures (DSA)</span><span>80%</span></div>
+                    <div class="progress-bg">
+                        <div class="progress-fill" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <h3> UI / UX & TOOLS</h3>
+                <div class="skill-item">
+                    <div class="skill-info"><span>Tailwind CSS</span><span>90%</span></div>
+                    <div class="progress-bg">
+                        <div class="progress-fill" style="width: 90%;"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-info"><span>Figma</span><span>85%</span></div>
+                    <div class="progress-bg">
+                        <div class="progress-fill" style="width: 85%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info"><span>Git/GitHub</span><span>90%</span></div>
+                    <div class="progress-bg">
+                        <div class="progress-fill" style="width: 90%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info"><span>VS Code</span><span>95%</span></div>
+                    <div class="progress-bg">
+                        <div class="progress-fill" style="width: 95%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info"><span>Linux / Cybersecurity</span><span>80%</span></div>
+                    <div class="progress-bg">
+                        <div class="progress-fill" style="width: 80%;"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="education">
+                <h2 class="icon-heading"><span class="icon-box"><i
+                            class="fa-solid fa-graduation-cap"></i></span><span>Education</span></h2>
+                <div class="edu1">
+                    <p><strong>BS Computer Science</strong><br>
+                        2024-2028<br>
+                        COMSATS University Lahore</p>
+                </div>
+                <div class="edu2">
+                    <p><strong>A-levels</strong><br>
+                        2022-2024<br>
+                        Lahore college of arts & sciences</p>
+                </div>
+            </section>
+            <section class="languages">
+                <h2 class="icon-heading"><span class="icon-box"><i
+                            class="fa-solid fa-globe"></i></span><span>Languages</span></h2>
+                <div class="lang-container">
+                    <div class="lang-item">
+                        <div class="circle" style="--percent: 100%; --color: rgb(93, 102, 210);">
+                            <span>100%</span>
+                        </div>
+                        <p>Urdu</p>
+                    </div>
+
+                    <div class="lang-item">
+                        <div class="circle" style="--percent: 90%; --color: rgb(93, 102, 210);">
+                            <span>90%</span>
+                        </div>
+                        <p>English</p>
+                    </div>
+
+                    <div class="lang-item">
+                        <div class="circle" style="--percent: 70%; --color: rgb(93, 102, 210);">
+                            <span>70%</span>
+                        </div>
+                        <p>Punjabi</p>
+                    </div>
+                </div>
+            </section>
+        </aside>
+
+        <main class="right-content">
+
+            <section class="summary">
+                <h1 class="icon-heading"><span class="icon-box"><i
+                            class="fa-solid fa-file-lines"></i></span><span>Professional Summary</span></h1>
+                <p>Second-year BSCS student at COMSATS University Lahore with a strong academic record and a merit
+                    scholarship. Passionate about software engineering, specializing in Natural Language Processing
+                    (NLP) architectures and Relational Database Management Systems (RDBMS). Actively building practical
+                    experience through full-stack development and complex algorithmic projects.</p>
+            </section>
+            <section class="work-experience">
+                <h1 class="icon-heading"><span class="icon-box"><i class="fa-solid fa-briefcase"></i></span><span> Work
+                        Experience</span></h1>
+                <hr>
+                <div class="tim-circle" style="--percent: 0; --color: white ;">
+                </div>
+                <hr>
+                <div class="tim-circle2" style="--percent: 0; --color: white ;">
+                </div>
+                <hr>
+                <div class="tim-circle3" style="--percent: 0; --color: white ;">
+                </div>
+
+                <div class="job">
+                    <h3>FULL STACK DEVELOPER (INTERNSHIP)</h3>
+                    <div class="job-date">
+                        <span>Jun 2026</span>
+                        <br>-<br>
+                        <span>Present</span>
+                    </div>
+                    <p><strong>Codeinity Solutions</strong></p>
+                    <ul>
+                        <li>Participating in a comprehensive 12-week MERN Stack and AI Integration program.</li>
+                        <li>Developing scalable full-stack applications with robust architectural design.</li>
+                        <li>Integrating Artificial Intelligence tools and NLP models into modern web environments.</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <h3>NANO FIBERS RESEARCH INTERN</h3>
+                    <div class="job-date">
+                        <span>Early 2024</span>
+                        <br>-<br>
+                        <span>May 2024</span>
+                    </div>
+
+                    <p><strong>LUMS</strong></p>
+                    <ul>
+                        <li>Conducted specialized research focusing on the synthesis and practical applications of nano
+                            fibers.</li>
+                        <li>Collaborated with academic teams to analyze material properties and maintain accurate
+                            experimental data.</li>
+                        <li>Gained hands-on experience with advanced laboratory equipment and structured research
+                            methodologies.</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+
+                    <h3>HR INTERN</h3>
+                    <div class="job-date">
+                        <span>May 2024</span>
+                        <br>-<br>
+                        <span>Aug 2024</span>
+                    </div>
+                    <p><strong>Shaukat Khanum</strong></p>
+                    <ul>
+                        <li>Assisted the Human Resources department in daily operational and administrative tasks.</li>
+                        <li>Supported personnel management and streamlined communication frameworks.</li>
+                        <li>Developed a strong understanding of organizational behavior and professional ethics.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="featured-projects">
+                <h1 class="icon-heading"><span class="icon-box"><i
+                            class="fa-solid fa-folder-open"></i></span><span>Featured Projects</span></h1>
+                <div class="projects-container">
+                    <div class="project">
+
+                        <img src="c.png" alt="VeriText NLP Suite" width="175" height="115">
+                        <h3>VERITEXT NLP SUITE</h3>
+                        <p>A specialized Natural Language Processing suite designed for misinformation detection and
+                            identifying machine-generated text.</p>
+                        <br>
+                        <div class="projP">
+                            <p>NLP Engines, Machine Learning</p>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <img src="ch.png" alt="AI Chess Game" width="175" height="115">
+                        <h3>AI-DRIVEN CHESS GAME</h3>
+                        <p>An intelligent chess application utilizing advanced algorithms and data structures for
+                            complex gameplay.</p>
+                        <br>
+                        <div class="projP">
+                            <p>C++, AI, DSA</p>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <img src="t.jpg" alt="C++ Game Engines" width="175" height="115">
+                        <h3>C++ TETRIS & TREASURE HUNT</h3>
+                        <p>Developed a robust custom Tetris engine alongside an Object-Oriented Programming (OOP) based
+                            treasure hunt game.</p>
+                        <br>
+                        <div class="projP">
+                            <p>C++, OOP, RDBMS</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="AAChivements">
+                <h1 class="icon-heading"><span class="icon-box"><i
+                            class="fa-solid fa-trophy"></i></span><span>Achievements</span></h1>
+                <div class="AAchivements">
+                    <div class="Achivements">
+                        <div class="ach-content">
+                            <span class="trophy"><i class="fa-solid fa-graduation-cap"></i></span>
+                            <div class="ach-text">
+                                <h3>Merit Scholarship</h3>
+                                <p>COMSATS University Lahore</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Achivements">
+                        <div class="ach-content">
+                            <span class="trophy"><i class="fa-solid fa-handshake"></i></span>
+                            <div class="ach-text">
+                                <h3>Project lead</h3>
+                                <p>Ai Integrateed chess game</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Achivements">
+                        <div class="ach-content">
+                            <span class="trophy"><i class="fa-solid fa-mobile-screen"></i></span>
+                            <div class="ach-text">
+                                <h3>Co-lead devloper</h3>
+                                <p>VeriText Architecture Team</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="references">
+
+                <h1 class="icon-heading"><span class="icon-box"><i
+                            class="fa-solid fa-users"></i></span><span>References</span></h1>
+
+                <div class="references-container">
+
+                    <div class="reference">
+
+                        <img src="p2.jpg" alt="reference" width="175" height="115">
+
+                        <p><strong>Ayyaz Muhammad</strong> Academic incharge<br> Punjab
+                            University<br>ayyaz@gmail.com<br>+92 321 7654321</p>
+
+                    </div>
+
+                    <div class="reference">
+
+                        <img src="p3.jpg" alt="reference" width="175" height="115">
+
+                        <p><strong>Haseeb Ahmed</strong> CTO<br> SoftLogics (Pvt.) Ltd<br>haseeb@softlog.com<br>+92 300
+                            9876543</p>
+
+                    </div>
+
+
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atmosphere - Minimal Weather</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="weathercss.css">
+</head>
+<body class="bg-gradient-to-tr from-cyan-500 to-blue-600 min-h-screen text-white font-sans transition-all duration-1000 p-8 md:p-24 flex items-start justify-center">
+
+    <div class="w-full max-w-[140rem] flex flex-col gap-16 md:gap-32">
+        
+        <header class="flex flex-col items-center justify-center w-full gap-10">
+            <div class="flex flex-col sm:flex-row items-center justify-center w-full gap-8 lg:gap-12">
+                <div class="flex items-center gap-6 bg-white/10 border border-white/20 rounded-full px-10 py-6 w-full max-w-7xl focus-within:bg-white/15 focus-within:border-white/30 transition-all">
+                    <input type="text" id="cityInput" placeholder="Enter city name..." autocomplete="off" class="bg-transparent border-none outline-none text-white placeholder-white/50 text-2xl md:text-3xl lg:text-4xl w-full">
+                    <button id="searchBtn" class="bg-white/20 hover:bg-white text-white hover:text-slate-900 font-semibold px-10 py-4 rounded-full transition-all text-xl md:text-2xl lg:text-3xl whitespace-nowrap">Search</button>
+                    <button id="geoBtn" title="Current Location" class="text-4xl md:text-5xl lg:text-6xl hover:bg-white/10 p-3 rounded-full transition-all leading-none">📍</button>
+                </div>
+                
+                <div class="flex bg-white/10 border border-white/20 rounded-full p-2.5">
+                    <button id="unitC" class="px-8 py-4 rounded-full text-xl md:text-2xl lg:text-3xl font-bold transition-all bg-white/25 text-white">°C</button>
+                    <button id="unitF" class="px-8 py-4 rounded-full text-xl md:text-2xl lg:text-3xl font-bold transition-all text-white/60 hover:text-white">°F</button>
+                </div>
+            </div>
+            
+            <div class="flex flex-wrap items-center justify-center gap-5 text-2xl md:text-3xl lg:text-4xl text-white/70 w-full max-w-6xl hidden" id="recentSearchesBox">
+                <span>Recents:</span>
+                <span id="recentTags" class="flex flex-wrap gap-4 justify-center"></span>
+            </div>
+        </header>
+
+        <div class="w-full flex justify-center">
+            <div id="errorMsg" class="bg-red-500/15 border border-red-500/30 text-red-100 px-12 py-6 rounded-full text-2xl md:text-3xl lg:text-4xl text-center hidden w-fit max-w-4xl">
+                <span id="errorText">City not found. Please try again.</span>
+            </div>
+            <div id="loadingMsg" class="flex flex-col items-center gap-8 py-32 text-2xl md:text-3xl lg:text-4xl text-white/70">
+                <div class="w-24 h-24 border-[6px] border-white/10 border-t-white rounded-full animate-spin"></div>
+                <span>Fetching atmospheric forecast...</span>
+            </div>
+        </div>
+
+        <main class="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-16 md:gap-40 items-start hidden" id="weatherContent">
+            
+            <section class="flex flex-col gap-10 md:gap-20">
+                <div>
+                    <h1 id="locationName" class="text-6xl md:text-8xl lg:text-[10rem] font-bold tracking-tight leading-none">London, GB</h1>
+                    <p id="weatherDate" class="text-2xl md:text-3xl lg:text-4xl text-white/70 mt-6"></p>
+                </div>
+
+                <div class="flex items-center gap-12 mt-8">
+                    <span id="weatherEmoji" class="text-[10rem] md:text-[14rem] lg:text-[16rem] select-none leading-none animate-bounce">☀️</span>
+                    <div class="text-[12rem] md:text-[16rem] lg:text-[18rem] font-bold tracking-tighter leading-none flex items-start">
+                        <span id="tempValue">16</span><span id="tempUnitSymbol" class="text-[7rem] md:text-[10rem] lg:text-[12rem] font-light">°</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 id="weatherCondition" class="text-5xl md:text-7xl lg:text-8xl font-semibold capitalize tracking-tight">Clear Sky</h2>
+                    <p id="tempHighLow" class="text-2xl md:text-3xl lg:text-4xl text-white/70 mt-6"></p>
+                </div>
+
+                <div class="flex flex-wrap items-center gap-x-16 gap-y-6 mt-20 pt-12 border-t border-white/20 text-2xl md:text-4xl lg:text-5xl text-white/95">
+                    <span>Feels Like <strong id="feelsLikeVal" class="font-bold ml-2">15°C</strong></span>
+                    <span class="opacity-35 select-none">•</span>
+                    <span>Humidity <strong id="humidityVal" class="font-bold ml-2">68%</strong></span>
+                    <span class="opacity-35 select-none">•</span>
+                    <span>Wind <strong id="windSpeedVal" class="font-bold ml-2">14 km/h</strong></span>
+                    <span class="opacity-35 select-none">•</span>
+                    <span>Pressure <strong id="pressureVal" class="font-bold ml-2">1018 hPa</strong></span>
+                </div>
+            </section>
+
+            <section class="flex flex-col gap-10">
+                <h3 class="text-3xl md:text-4xl lg:text-5xl font-bold uppercase tracking-wider text-white/60 border-b border-white/20 pb-6 mb-4">5-Day Forecast</h3>
+                <div id="forecastList" class="flex flex-col"></div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
