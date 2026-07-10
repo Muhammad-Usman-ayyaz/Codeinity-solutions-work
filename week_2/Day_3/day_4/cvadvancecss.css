@@ -306,24 +306,29 @@ p {
     text-align: center;
 }
 
-.circle {
+.circle-svg-wrap {
+    position: relative;
     width: 75px;
     height: 75px;
-    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    background: conic-gradient(var(--color) var(--percent), #334155 0);
+    background-color: #1e293b;
+    border-radius: 50%;
 }
 
-.circle::before {
-    content: "";
+.circle-svg-wrap svg {
     position: absolute;
-    width: 85%;
-    height: 85%;
-    background: #1e293b;
-    border-radius: 50%;
+    top: 0;
+    left: 0;
+}
+
+.circle-svg-wrap span {
+    position: relative;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    z-index: 1;
 }
 
 .circle span {
@@ -348,7 +353,7 @@ p {
     align-items: center;
     justify-content: center;
     position: relative;
-    background: conic-gradient(var(--color) var(--percent), #ffffff 0);
+    background-color: #ffffff;
     transform: translate(10px, 68px);
 }
 
@@ -361,7 +366,7 @@ p {
     align-items: center;
     justify-content: center;
     position: relative;
-    background: conic-gradient(var(--color) var(--percent), #ffffff 0);
+    background-color: #ffffff;
     transform: translate(10px, 254px);
 }
 
@@ -374,7 +379,7 @@ p {
     align-items: center;
     justify-content: center;
     position: relative;
-    background: conic-gradient(var(--color) var(--percent), #ffffff 0);
+    background-color: #ffffff;
     transform: translate(10px, 405px);
 }
 
@@ -704,22 +709,94 @@ ul {
 @media print {
     @page {
         margin: 0;
+        size: A4 portrait;
     }
 
+    html,
     body {
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
-        margin: 0;
-        padding: 0;
+        margin: 0 !important;
+        padding: 0 !important;
+        background-color: #f4f4f4 !important;
+        width: 100% !important;
+    }
+
+    #download-pdf {
+        display: none !important;
     }
 
     .resume-box {
         box-shadow: none !important;
         margin: 0 !important;
         max-width: 100% !important;
+        width: 100% !important;
+        display: flex !important;
+        page-break-inside: avoid;
+        break-inside: avoid;
     }
 
-    #download-pdf {
-        display: none !important;
+    .left-sidebar {
+        background-color: #1a2332 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        color: white !important;
+    }
+
+    .left-sidebar * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    .right-content {
+        background-color: #ffffff !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    .progress-fill {
+        background-color: rgb(93, 102, 210) !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    .progress-bg {
+        background-color: #444 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    .icon-box {
+        background-color: rgb(93, 102, 210) !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    .circle-svg-wrap {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        background-color: #1e293b !important;
+    }
+
+    .job,
+    .project,
+    .Achivements,
+    .reference {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+
+    .work-experience hr {
+        display: block !important;
+        color: black !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    .tim-circle,
+    .tim-circle2,
+    .tim-circle3 {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
     }
 }
