@@ -44,6 +44,45 @@
 
 
         </header>
+        <main id="weatherContent" class="weather-main hidden">
+            <section class="current-weather">
+                <div class="location-info">
+                    <h1 id="locationName">
+                        Lahore , PK
+                    </h1>
+                    <p id="weatherDate">
+                        Friday, July 11, 2026 | 12:00 AM
+                    </p>
+                </div>
+                <div class="temperature-display">
+                    <span id="weatherEmoji">☀️</span>
+                    <span id="temperature">25</span>
+                    <span id="tempunitsymbol">°C</span>
+
+
+
+                </div>
+                <div class="weather-details">
+                    <span>Feels Like <strong class="feelslikeval">15°C</strong></span>
+                    <span>Humidity <strong id="humidityval">60%</strong></span>
+                    <span>Wind <strong id="windspeedval">25km/h</strong></span>
+                    <span>Pressure <strong id="pressureval">1013hPa</strong></span>
+                    <span>Sunrise <strong id="sunrisetimeval">6:00 AM</strong></span>
+                    <span>Sunset <strong id="sunsettimeval">6:00 PM</strong></span>
+
+                </div>
+
+            </section>
+            <section class="forecast-section">
+                <h3 class="forecast-title">
+                    5 Day Forecast
+                </h3>
+                <div id="forecastlist" class="forecast-list">
+
+
+                </div>
+            </section>
+        </main>
     </div>
 
     <script src="script.js"></script>
