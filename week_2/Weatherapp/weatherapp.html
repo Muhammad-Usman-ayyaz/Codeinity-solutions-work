@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atmosphere - Minimal Weather</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="weathercss.css">
+</head>
+
+<body class="theme-default">
+    <div class="app_container">
+        <header class="header">
+            <div class="searchbar">
+                <input type="text" id="cityInput" class="searchbar" placeholder="Enter city name..." autocomplete="off">
+                <button id="searchbtn" class="searchbtn">Search</button>
+                <button id="geobtn" class="geobtn">Current Location</button>
+            </div>
+            <div class="unit-toggle">
+                <button id="unitC" class="unitbtn active">°C</button>
+                <button id="unitF" class="unitbtn">°F</button>
+
+
+            </div>
+            <div id="recentSearches" class="recent-searches hidden">
+                <span>Recenets:</span>
+                <span id="searches"></span>
+            </div>
+            <div class="search-status">
+                <div id="errormsg" class="error hidden">
+                    <span id="errortxt">City not found or check your internet connection 🤣</span>
+                </div>
+
+
+            </div>
+            <div id="loadingMsg" class="loading hidden">
+                <div class="spinner"></div>
+                <span id="loadingTxt">Loading weather data...</span>
+            </div>
+
+
+
+        </header>
+        <main id="weatherContent" class="weather-main hidden">
+            <section class="current-weather">
+                <div class="location-info">
+                    <h1 id="locationName">
+                        Lahore , PK
+                    </h1>
+                    <p id="weatherDate">
+                        Friday, July 11, 2026 | 12:00 AM
+                    </p>
+                </div>
+                <div class="temperature-display">
+                    <span id="weatherEmoji">☀️</span>
+                    <span id="temperature">25</span>
+                    <span id="tempunitsymbol">°C</span>
+
+
+
+                </div>
+                <div class="weather-details">
+                    <span>Feels Like <strong class="feelslikeval">15°C</strong></span>
+                    <span>Humidity <strong id="humidityval">60%</strong></span>
+                    <span>Wind <strong id="windspeedval">25km/h</strong></span>
+                    <span>Pressure <strong id="pressureval">1013hPa</strong></span>
+                    <span>Sunrise <strong id="sunrisetimeval">6:00 AM</strong></span>
+                    <span>Sunset <strong id="sunsettimeval">6:00 PM</strong></span>
+
+                </div>
+
+            </section>
+            <section class="forecast-section">
+                <h3 class="forecast-title">
+                    5 Day Forecast
+                </h3>
+                <div id="forecastlist" class="forecast-list">
+
+
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
