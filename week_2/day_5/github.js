@@ -1,6 +1,6 @@
 "use strict";
 
-const GITHUB_TOKEN = "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";
+const GITHUB_TOKEN = "";
 
 const searchForm = document.getElementById("searchForm");
 const usernameInput = document.getElementById("usernameInput");
@@ -111,11 +111,11 @@ async function fetchGitHubUser(username) {
 
         if (!userResponse.ok) {
             if (userResponse.status === 404) {
-                errorState.textContent = `❌ User "${username}" not found.`;
+                errorState.textContent = ` User "${username}" not found.`;
             } else if (userResponse.status === 403 || userResponse.status === 429) {
-                errorState.textContent = "⚡ Rate limit exceeded.";
+                errorState.textContent = " Rate limit exceeded.";
             } else {
-                errorState.textContent = `⚠️ API error (${userResponse.status}).`;
+                errorState.textContent = ` API error (${userResponse.status}).`;
             }
             showSection(errorState);
             return;
